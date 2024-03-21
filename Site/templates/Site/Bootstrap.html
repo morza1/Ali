@@ -1,0 +1,524 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+	  <link rel="stylesheet" href="{% static 'Site/Bootstrap-CSS/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="{% static 'Site/Bootstrap-JS/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'Site/Bootstrap-JS/bootstrap.bundle.min.js' %}"></script>
+	<link rel="shortcut icon" href="../../static/Site/Img/SplashScreenImage.ico" type="image/x-icon">
+	<title>Ali</title>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+    <link href="Bootstrap-CSS/Navbar-Fixed.css" rel="stylesheet">
+  </head>
+  <body>
+	<!--  NAV BAR	-->
+	<nav style="opacity: 0.9" class="shadow-sm navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+	  <div class="container-fluid">
+		<a class="navbar-brand fs-3" href="https://alimaster.pythonanywhere.com/" target="_blank"> <img src="{% static 'Site/Img/Bootstrap-Logo.svg' %}" alt="Logo" width="47" height="40" class="Img-rot d-inline-block align-text-top me-3 ms-1"> Ali Bagherian</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div style="font-size: 20px" class="collapse navbar-collapse" id="navbarCollapse">
+		  <ul class="navbar-nav  ms-auto mb-2 mb-md-0">
+			<li class="nav-item">
+			  <a class="nav-link" style="width: 100px" href="#Contact">Contact</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" style="width: 75px" href="#Team">Team</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" style="width: 75px" href="#Posts">Posts</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" style="width: 116px" href="#Features">Features</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="page" href="">Home</a>
+			</li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+	<!--  HEADER 	-->
+	<div class="py-0">
+		<section class="container">
+			<br>
+			<div class="row align-items-center">
+				<div class="col-md-6 pt-5">
+					<h2 style="font-size:49px" class="display-5 mb-4">Build <span class="text-info">Reactive</span> Websites easily <span class="text-danger">!</span></h2>
+					<p class="lead text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur distinctio ea iusto nihil nisi placeat quibusdam reiciendis reprehenderit saepe voluptatem!</p>
+					<button type="submit" class="btn btn-outline-primary" style="--bs-btn-color: #be00ff;--bs-btn-border-color: #d80dfd;--bs-btn-hover-bg: #dd03ff;--bs-btn-hover-border-color: #cd0dfd; width: 100px" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  						Get Start
+					</button>
+					<button type="button" class="btn btn-outline-primary ms-4" id="liveToastBtn">Show Live</button>
+
+			<div class="toast-container position-fixed p-4 opacity-100" style="bottom: 15px; right: 25px">
+			  <div id="liveToast" class="toast" role="alertdialog" aria-live="assertive" aria-atomic="true">
+				<div class="toast-header">
+				  <img src="../../static/Site/Img/Bootstrap-Logo.svg" width="32" height="25" class="me-2 Img-Got" style="cursor: pointer;" alt="...">
+				  <strong class="me-auto fs-5 ms-2">Ali</strong>
+				  <small class="text-info-emphasis fs-6">Just Now</small>
+				  <button type="button" class="btn-close fs-5" data-bs-dismiss="toast" id="CloseBtn" aria-label="Close"></button>
+				</div>
+				<div class="toast-body fs-4">
+				  <span style="color:green;">Happy</span> <span style="color:blue;">New</span> <span style="color:red;">Year</span> <span style="color:purple;">!</span><img src="../../static/Site/Img/ASD.jpg" width="43" height="36" class="ms-2 mb-2">
+				</div>
+			  </div>
+			</div>
+				</div>
+				<div class="col-md-5 pt-5 mt-5" style="margin-left: 110px; margin-bottom:15px">
+					<img src="{% static 'Site/Img/Programmer-amico.png'%}" width="800" class="img-fluid" alt="">
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h1 class="ms-3 modal-title fs-4" id="exampleModalLabel">Add Account</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		  </div>
+		  <div class="modal-body">
+				<form action="" class="p-4">
+					<div class="mb-5">
+					  <label for="ContactName1" class="form-label">User Name</label>
+					  <input type="text" class="form-control" id="ContactName1" placeholder="Your UserName">
+					</div>
+					<div class="mb-1">
+					  <label for="ContactEmail1" class="form-label">Email Address</label>
+					  <input type="email" class="form-control" id="ContactEmail1" placeholder="EX : AliPro@Gmail.com">
+					</div>
+				</form>
+		  </div>
+		  <div class="modal-footer">
+			  <button type="submit" class="btn btn-success mt-2" style="--bs-btn-color: white;--bs-btn-border-color: #d80dfd;--bs-btn-hover-bg: #dd03ff; --bs-btn-bg: #dd03ff;--bs-btn-hover-border-color: #cd0dfd; width: 135px;">
+				  <a class="text-decoration-none text-white" href="">Submit</a></button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!-- FEATURES -->
+    <div class="py-4" style="background-color: #d9d9d9" id="Features">
+      <section class="container">
+        <h2 class="text-center display-5 mb-4 mt-5">Features</h2>
+        <p class="lead text-muted mb-5 pb-3 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+        <div class="row gy-4 pb-5">
+          <div class="col-md-6 col-xl-4">
+            <div class="card p-5">
+              <div class="card-body text-center">
+                <svg style="color:purple" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"></path>
+                </svg>
+                <h5 class="card-title mt-4 mb-3">Powerful</h5>
+                <p class="card-text text-muted lead">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="card p-5">
+              <div class="card-body text-center">
+                <svg style="color:purple" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"></path>
+                </svg>
+                <h5 class="card-title mt-4 mb-3">Growth</h5>
+                <p class="card-text text-muted lead">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="card p-5">
+              <div class="card-body text-center">
+                <svg style="color:purple" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M4.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM3 4.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"></path>
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8.5v3a1.5 1.5 0 0 1 1.5 1.5h5.5a.5.5 0 0 1 0 1H10A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5H.5a.5.5 0 0 1 0-1H6A1.5 1.5 0 0 1 7.5 10V7H2a2 2 0 0 1-2-2V4zm1 0v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1zm6 7.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5z"></path>
+                </svg>
+                <h5 class="card-title mt-4 mb-3">NetWork</h5>
+                <p class="card-text text-muted lead">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="card p-5">
+              <div class="card-body text-center">
+                <svg style="color:purple" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M1.333 2.667C1.333 1.194 4.318 0 8 0s6.667 1.194 6.667 2.667V4c0 1.473-2.985 2.667-6.667 2.667S1.333 5.473 1.333 4V2.667z"></path>
+                  <path d="M1.333 6.334v3C1.333 10.805 4.318 12 8 12s6.667-1.194 6.667-2.667V6.334a6.51 6.51 0 0 1-1.458.79C11.81 7.684 9.967 8 8 8c-1.966 0-3.809-.317-5.208-.876a6.508 6.508 0 0 1-1.458-.79z"></path>
+                  <path d="M14.667 11.668a6.51 6.51 0 0 1-1.458.789c-1.4.56-3.242.876-5.21.876-1.966 0-3.809-.316-5.208-.876a6.51 6.51 0 0 1-1.458-.79v1.666C1.333 14.806 4.318 16 8 16s6.667-1.194 6.667-2.667v-1.665z"></path>
+                </svg>
+                <h5 class="card-title mt-4 mb-3">Server</h5>
+                <p class="card-text text-muted lead">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="card p-5">
+              <div class="card-body text-center">
+                <svg style="color:purple" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708l2 2z"></path>
+                  <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"></path>
+                </svg>
+                <h5 class="card-title mt-4 mb-3">Cloud</h5>
+                <p class="card-text text-muted lead">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="card p-5">
+              <div class="card-body text-center">
+                <svg style="color:purple" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path>
+                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path>
+                </svg>
+                <h5 class="card-title mt-4 mb-3">Download</h5>
+                <p class="card-text text-muted lead">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+	<!--  PROJECTS	-->
+	<div class="py-5" style="background-color: #e5e5e5">
+		<section class="container">
+			<div class="row">
+				<div class="col-md-6 pt-5">
+					<h2 style="font-size:49px" class="display-4 mb-4">A <span class="text-info">FrameWork</span> In <span class="text-danger">Python</span></h2>
+					<p class="lead text-muted mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur distinctio ea iusto nihil nisi placeat quibusdam reiciendis reprehenderit.</p>
+					<a href="#ReadMore" class="btn btn-primary" style="--bs-btn-color: white;--bs-btn-border-color: #d80dfd;--bs-btn-hover-bg: #dd03ff; --bs-btn-bg: #dd03ff;--bs-btn-hover-border-color: #cd0dfd; width: 150px;text-align: center" type="submit"><i class="bi bi-chevron-right"></i> Read More</a>
+				</div>
+				<div class="col-md-5 ms-auto">
+					<img src="../../static/Site/Img/Django-Logo.png" width="450" class="img-fluid rounded" alt="">
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="py-5" style="background-color: #595959;">
+		<section class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<img style="margin-left:60px" src="../../static/Site/Img/Flask-Logo.png" width="300" class="img-fluid" alt="">
+				</div>
+				<div class="col-md-6 pt-5 mb-5"  style="margin-left:170px">
+					<h2 style="font-size:49px" class="display-4 mb-4">A <span class="text-warning">Module</span> In <span class="text-danger">Python</span></h2>
+					<p style="color: white" class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur distinctio ea iusto nihil nisi placeat quibusdam reiciendis reprehenderit.</p>
+					<a href="#ReadMore" class="btn btn-primary" style="--bs-btn-color: white;--bs-btn-border-color: #d80dfd;--bs-btn-hover-bg: #dd03ff; --bs-btn-bg: #dd03ff;--bs-btn-hover-border-color: #cd0dfd; width: 150px;text-align: center" type="submit"><i class="bi bi-chevron-right"></i> Read More</a>
+				</div>
+			</div>
+		</section>
+	</div>
+	<br>
+	<!--  POSTS	-->
+	<div class="py-4" id="Posts">
+		<main class="container">
+			<h2 class="text-center display-5 mb-4 mt-5">Posts</h2>
+			<p class="lead text-muted mb-5 pb-3 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="card shadow-lg mb-4 ms-auto" style="width: 20rem; margin-right: 100px">
+						  <img src="../../static/Site/Img/Family.webp" class="card-img-top" alt="...">
+						  <div class="card-body">
+							<p class="card-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#ReadMore" class="btn btn-primary" style="--bs-btn-color: white;--bs-btn-border-color: #d80dfd;--bs-btn-hover-bg: #dd03ff; --bs-btn-bg: #dd03ff;--bs-btn-hover-border-color: #cd0dfd;text-align: center" type="submit"><i class="bi bi-arrow-right"></i> Read More</a>
+						  </div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="card shadow-lg mb-4" style="width: 20rem; margin-left: 55px">
+						  <img src="../../static/Site/Img/Family3.jpg" class="card-img-top" height="202" alt="...">
+						  <div class="card-body">
+							<p class="card-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#ReadMore" class="btn btn-primary" style="--bs-btn-color: white;--bs-btn-border-color: #d80dfd;--bs-btn-hover-bg: #dd03ff; --bs-btn-bg: #dd03ff;--bs-btn-hover-border-color: #cd0dfd;text-align: center" type="submit"><i class="bi bi-arrow-right"></i> Read More</a>
+						  </div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="card shadow-lg mb-4" style="width: 20rem; margin-left: 100px">
+						  <img src="../../static/Site/Img/Family1.png" height="202" class="card-img-top" alt="...">
+						  <div class="card-body">
+							<p class="card-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<a href="#ReadMore" class="btn btn-primary" style="--bs-btn-color: white;--bs-btn-border-color: #d80dfd;--bs-btn-hover-bg: #dd03ff; --bs-btn-bg: #dd03ff;--bs-btn-hover-border-color: #cd0dfd;text-align: center" type="submit"><i class="bi bi-arrow-right"></i> Read More</a>
+						  </div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!--  TEAM	-->
+	<div class="py-4" id="Team">
+		<main class="container">
+			<h2 class="text-center display-5 mb-4 mt-5">Team</h2>
+			<p class="lead text-muted mb-5 pb-3 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ex nobis quia.</p>
+			<div class="row" style="border-radius: 50px;">
+				<br>
+				<br>
+				<div class="col-lg-3 text-center shadow p-4" style="border-radius: 40px;margin-left: 10px">
+					<img src="../../static/Site/Img/Amin_B.jpg" class="img-fluid rounded-circle border mb-4 p-1" alt="...">
+					<h2 style="font-family: Vazir" class="fs-3">Amin Bagherian</h2>
+					<p>TaekWondo</p>
+					<ul class="list-unstyled d-flex justify-content-center">
+						<li class="mx-1"><a href="#Telegram" class="text-muted"><i class="bi bi-telegram"></i></a></li>
+						<li class="mx-1"><a href="#Twitter" class="text-muted"><i class="bi bi-twitter"></i></a></li>
+						<li class="mx-1"><a href="#Instagram" class="text-muted"><i class="bi bi-instagram"></i></a></li>
+						<li class="mx-1"><a href="#Whatsapp" class="text-muted"><i class="bi bi-whatsapp"></i></a></li>
+					</ul>
+				</div >
+				<div class="col-lg-3 text-center shadow p-4" style="border-radius: 40px;margin-left: 150px">
+					<img src="../../static/Site/Img/Question_Mark.webp" class="img-fluid rounded-circle border mb-4 p-1" alt="...">
+					<h2 style="font-family: Vazir" class="fs-3">Ali Bagherian</h2>
+					<p>Master Programmer</p>
+					<ul class="list-unstyled d-flex justify-content-center">
+						<li class="mx-1"><a href="#Telegram" class="text-muted"><i class="bi bi-telegram"></i></a></li>
+						<li class="mx-1"><a href="#Twitter" class="text-muted"><i class="bi bi-twitter"></i></a></li>
+						<li class="mx-1"><a href="#Instagram" class="text-muted"><i class="bi bi-instagram"></i></a></li>
+						<li class="mx-1"><a href="#Whatsapp" class="text-muted"><i class="bi bi-whatsapp"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 text-center shadow p-0" style="border-radius: 40px;margin-left: 150px">
+					<img src="../../static/Site/Img/Morteza_B.jpg" width="294" height="283" class="rounded-circle border mb-4 p-1" style="margin-top: 25px" alt="...">
+					<h2 style="font-family: Vazir" class="fs-3">Morteza Bagherian</h2>
+					<p>KungFu</p>
+					<ul class="list-unstyled d-flex justify-content-center">
+						<li class="mx-1"><a href="#Telegram" class="text-muted"><i class="bi bi-telegram"></i></a></li>
+						<li class="mx-1"><a href="#Twitter" class="text-muted"><i class="bi bi-twitter"></i></a></li>
+						<li class="mx-1"><a href="#Instagram" class="text-muted"><i class="bi bi-instagram"></i></a></li>
+						<li class="mx-1"><a href="#Whatsapp" class="text-muted"><i class="bi bi-whatsapp"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!--  CONTACT	-->
+	<br>
+	<div class="py-4" id="Contact" style="background-color: #f5f5f5">
+		<section class="container">
+			<h2 class="text-center display-5 mb-4 mt-5">Contact</h2>
+			<p class="lead text-muted mb-5 pb-2 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row g-4 font-monospace">
+					<div class="col-md-6">
+						<div class="rounded p-4 shadow-lg" style="background-color: #ececec">
+							<i style="font-size: 48px; color: #9800ff;" class="bi bi-geo-alt"></i>
+							<h2 class="mt-4 mb-4">Address</h2>
+							<div>Iran, Tabriz | IT 598731</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="rounded p-4 shadow-lg" style="background-color: #ececec">
+							<i style="font-size: 48px; color: #9800ff;" class="bi bi-telephone"></i>
+							<h2 class="mt-4 mb-4">Call Us</h2>
+							<div>+94 15467944</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="rounded p-4 shadow-lg" style="background-color: #ececec">
+							<i style="font-size: 48px; color: #9800ff;" class="bi bi-envelope-at"></i>
+							<h2 class="mt-4 mb-4">Email Us</h2>
+							<div>AliPro@gmail.com</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="rounded p-4 shadow-lg" style="background-color: #ececec">
+							<i style="font-size: 48px; color: #9800ff;" class="bi bi-clock-history"></i>
+							<h2 class="mt-4 mb-4">Open Hours</h2>
+							<div>9:00 AM - 8:00 PM</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="col-md-6">
+				<form action="" class="p-4 rounded shadow" style="background-color:#ececec">
+					<div class="mb-4">
+					  <label for="ContactName" class="form-label">Full Name</label>
+					  <input type="text" class="form-control" id="ContactName" placeholder="Your FullName">
+					</div>
+					<div class="mb-4">
+					  <label for="ContactEmail" class="form-label">Email Address</label>
+					  <input type="email" class="form-control" id="ContactEmail" placeholder="EX : AliPro@Gmail.com">
+					</div>
+					<div class="mb-3">
+					  <label for="ContactTextarea" class="form-label">Comment Text</label>
+					  <textarea class="form-control" id="ContactTextarea" placeholder="Your Comment" rows="6"></textarea>
+					</div>
+					<button type="submit" class="btn btn-success mt-2" style="--bs-btn-color: white;--bs-btn-border-color: #d80dfd;--bs-btn-hover-bg: #dd03ff; --bs-btn-bg: #dd03ff;--bs-btn-hover-border-color: #cd0dfd; width: 135px;">Send</button>
+				</form>
+			</div>
+		</div>
+		</section>
+	</div>
+	<!--  FOOTER	-->
+	<div class="py-4 text-white" style="background-color: #081828">
+		<footer class="container pt-5 pb-1">
+			<div class="row py-3">
+				<div class="col-md-3">
+					<h2 class="mb-4">Ali Bagherian</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, rerum?</p>
+				</div>
+				<div class="col-md-3">
+					<h3 class="ps-3" style="border-left: 4px purple solid">Pages</h3>
+					<ul class="list-unstyled mt-4">
+						<li>
+							<a href="" class="text-decoration-none" style="color: darkgray">Django</a>
+						</li>
+						<li>
+							<a href="" class="text-decoration-none" style="color: darkgray">Flask</a>
+						</li>
+						<li>
+							<a href="" class="text-decoration-none" style="color: darkgray">Team</a>
+						</li>
+						<li>
+							<a href="" class="text-decoration-none" style="color: darkgray">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h3 class="ps-3" style="border-left: 4px purple solid">More</h3>
+					<ul class="list-unstyled mt-4">
+						<li>
+							<a href="" class="text-decoration-none" style="color: darkgray">Flask API</a>
+						</li>
+						<li>
+							<a href="" class="text-decoration-none" style="color: darkgray">Vue JS</a>
+						</li>
+						<li>
+							<a href="" class="text-decoration-none" style="color: darkgray">React JS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h3 class="ps-3" style="border-left: 4px purple solid">Posts</h3>
+					<ul class="list-unstyled mt-4">
+						<li>
+							<a href="" class="text-decoration-none" style="color: darkgray">Learn Python</a>
+						</li>
+						<li>
+							<a href="" class="text-decoration-none" style="color: darkgray">Learn SQL</a>
+						</li>
+						<li>
+							<a href="" class="text-decoration-none" style="color: darkgray">Learn C++</a>
+						</li>
+						<li>
+							<a href="" class="text-decoration-none" style="color: darkgray">Learn C#</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<div class="text-center">Designed & Developed By: <a href="" class="ps-2 fs-5 text-decoration-none" style="color: purple;"> Ali Bagherian!</a></div>
+		</footer>
+	</div>
+	<a href="#" class="bg-warning justify-content-center opacity-75 align-items-center rounded-circle text-white d-flex position-fixed" style="width: 55px; height: 55px; right: 25px; bottom: 20px">
+		<i style="font-size: 27px" class="bi bi-arrow-up"></i>
+	</a>
+	<script src="Bootstrap-JS/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript">
+		const toastTrigger = document.getElementById('liveToastBtn')
+		const toastLiveExample = document.getElementById('liveToast')
+		const closeBtn = document.getElementById('CloseBtn')
+
+		if (toastTrigger) {
+		  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+		  toastTrigger.addEventListener('click', () => {
+			toastBootstrap.show()
+		  })
+		}
+		toastTrigger.addEventListener("dblclick", ev => {
+			ev.target.textContent = "In Live";
+			ev.target.style.color = "blue";
+			ev.target.className = "btn btn-outline-success ms-4"
+		})
+
+		toastTrigger.addEventListener("click", ev => {
+			ev.target.textContent = "In Live";
+			ev.target.style.color = "blue";
+			ev.target.className = "btn btn-outline-success ms-4"
+		})
+
+		closeBtn.addEventListener("click", ev => {
+			toastTrigger.textContent = "Show Live"
+			toastTrigger.style.color = "red"
+			toastTrigger.classList = "btn btn-outline-primary ms-4"
+		})
+	</script>
+    </body>
+</html>
